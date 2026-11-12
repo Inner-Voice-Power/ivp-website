@@ -1,0 +1,34 @@
+media:
+  input: static/uploads
+  output: /uploads
+  categories: [image]
+  extensions: [jpg, jpeg, webp]
+  rename: safe
+
+content:
+  # Ordinary pages: everything in content except calendar entries.
+  - name: pages
+    label: Home
+    type: collection
+    path: content
+    format: toml-frontmatter
+    subfolders: true
+
+    exclude:
+      - img
+
+    filename:
+      template: "{primary}.md"
+      field: true
+
+    fields:
+      - name: title
+        label: Page title
+        type: string
+        required: true
+        description: "Title for your page."
+
+
+settings:
+  content:
+    merge: true
