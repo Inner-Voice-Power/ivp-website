@@ -11,7 +11,7 @@ content:
     label: Home
     type: collection
     path: content
-    format: toml-frontmatter
+    format: yaml-frontmatter
     subfolders: true
 
     exclude:
