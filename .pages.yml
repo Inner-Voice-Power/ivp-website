@@ -28,6 +28,12 @@ content:
         required: true
         description: "Title for your page."
 
+      - name: body
+        label: Page content
+        type: rich-text
+        options:
+          format: markdown
+          switcher: true
 
 settings:
   content:
